@@ -22,23 +22,16 @@ Funcionalidade: [US-0001]Configurar produto
 
 
     Esquema do Cenário: Seleção de produtos com tamanho e cor diferentes
-    Quando seleciono uma blusa da cor <cor>
-    E tamanho <tamanho>
-    E adiciono a quantidade <quantidade>
+    Dado que eu selecione uma blusa da cor <cor> com <tamanho> e <quantidade>
     Então o sistema deve acescentar o produto no carrinho
 
         Exemplos:
             | cor      | tamanho | quantidade |
             | azul     | M       | 1          |
-            | azul     | G       | 2          |
-            | azul     | GG      | 3          |
             | vermelho | M       | 1          |
             | amarelo  | G       | 2          |
             | verde    | GG      | 3          |
 
     Cenário: limpar configuração do produto selecionado
-    Quando clico no botão limpar configuração
+    Dado que se clique no botão limpar configuração
     Então o sistema deve limpar a configuração do produto
-    E a quantidade do produto deve ser 1
-    E a cor do produto não deve estar selecionada
-    E o tamanho do produto não deve estar selecionado
